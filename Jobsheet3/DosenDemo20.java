@@ -42,6 +42,31 @@ public class DosenDemo20 {
         }
 
         DataDosen20 data = new DataDosen20();
-        data.dataSemuaDosen(arrayOfDosen20);
+        
+        while(true){
+                System.out.println("\n==============================");
+                System.out.println("        MENU DATA DOSEN       ");
+                System.out.println("==============================");
+                System.out.println("1. Tampilkan Semua Data Dosen");
+                System.out.println("2. Jumlah Dosen per Jenis Kelamin");
+                System.out.println("3. Rata-rata Usia per Jenis Kelamin");
+                System.out.println("4. Informasi Dosen Paling Tua");
+                System.out.println("5. Informasi Dosen Paling Muda");
+                System.out.println("6. Keluar");
+                System.out.println("==============================");
+                System.out.print("Pilih Angka Menu yang ingin dituju: ");
+                System.out.print("Pilih Angka Menu yang ingin ditujui: ");
+            int b = sc.nextInt();
+            switch (b) {
+                case 1:data.dataSemuaDosen(arrayOfDosen20); break;
+                case 2:data.jumlahDosenPerJenisKelamin(arrayOfDosen20); break;
+                case 3:data.rataUsiaDosenPerJenisKelamin(arrayOfDosen20);break;
+                case 4:data.infoDosenPalingTua(arrayOfDosen20); break;
+                case 5:data.infoDosenPalingMuda(arrayOfDosen20);break;
+                case 6:System.out.println("Program selesai.");return; 
+                default:System.out.println("Menu tidak valid.");
+            }
+
+        }
     }
 }
