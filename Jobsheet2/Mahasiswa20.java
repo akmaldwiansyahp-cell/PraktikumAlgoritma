@@ -1,4 +1,4 @@
-public class Mahasiswa20 {
+public class mahasiswa20 {
 
     String nama;
     String nim;
@@ -37,11 +37,11 @@ public class Mahasiswa20 {
         }
     }
 
-    public Mahasiswa20(){
+    public mahasiswa20(){
 
     }
 
-    public Mahasiswa20(String nm, String nim, double ipk, String kls){
+    public mahasiswa20(String nm, String nim, double ipk, String kls){
         nama = nm;
         this.nim = nim;
         this.ipk = ipk;

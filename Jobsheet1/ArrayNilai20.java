@@ -68,6 +68,7 @@ public class ArrayNilai20 {
             TotalSKS += ArrayAngka[i][1];
         }
 
+        System.out.println("");
         System.out.println("Nilai hasil konversi");
         System.out.println("=============");
         System.out.println("MATA KULIAH | NILAI ANGKA | NILAI HURUF | BOBOT NILAI");

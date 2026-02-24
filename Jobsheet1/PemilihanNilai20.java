@@ -65,7 +65,5 @@ public class PemilihanNilai20 {
                 System.out.println("===============================");
             }
         }
-        
-
     }
 }

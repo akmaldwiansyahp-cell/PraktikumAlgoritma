@@ -13,5 +13,8 @@ public class DosenMain20 {
         dosen1.setStatusAktif(false);
         dosen1.TampilkanInformasi();
         
+
+        Dosen20 dosen2 = new Dosen20("2", "Dosen 2", true, 2005, "Fisika");
+        dosen2.TampilkanInformasi();
     }
 }
