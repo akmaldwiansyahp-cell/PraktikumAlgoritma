@@ -84,7 +84,9 @@ public class MenuCafe {
                 }
     
                 break;
-                default: return;
+                default: 
+                sc.close();
+                return;
             }
         }   
         }
