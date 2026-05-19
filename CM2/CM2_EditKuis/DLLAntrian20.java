@@ -1,4 +1,4 @@
-package CM2;
+package CM2.CM2_EditKuis;
 
 public class DLLAntrian20 {
     NodePembeli20 headPembeli;
@@ -24,7 +24,7 @@ public class DLLAntrian20 {
     }
 
     void addLast(Pembeli20 data){
-        NodePembeli20 newNode = new NodePembeli20(data);
+        NodePembeli20 newNode = new NodePembeli20(data, null);
         counter++;
         newNode.data.noAntrian = counter;
         if (isEmpty()) {
@@ -115,5 +115,48 @@ public class DLLAntrian20 {
             current.data.tampil();
             current = current.next;
         }
-    }    
+    }
+    
+    void AddPrioritas(Pembeli20 data){
+        if (isEmpty()) {
+            System.out.println("Linked list masih kosong");
+            return;            
+        }
+
+        NodePembeli20 current = headPembeli;
+        int count = 0;
+
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+
+        if (count >= 3) {
+        NodePembeli20 in = new NodePembeli20(data, null);
+        NodePembeli20 temp = headPembeli;
+
+        count = 0;
+
+        for (int i = 0; i < 3; i++) {
+            count++;
+            if (count == 2) {
+                in.next = temp.next;
+                temp.next = in;
+                if (in.next == null) {
+                    tailPembeli = in;
+                    counter++;
+                    in.data.noAntrian = counter;
+                }
+                counter++;
+                in.data.noAntrian = counter;                                
+                break;              
+            }
+            temp = temp.next;
+        }
+
+        }else{
+            System.out.println("Linked list harus memiliki minimal 3 data");
+            return;
+        }
+    }
 }
